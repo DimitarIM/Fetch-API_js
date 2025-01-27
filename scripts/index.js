@@ -18,6 +18,7 @@ searchButton.addEventListener("click", () => {
 
         steamId = userInput;
         GETData(steamId);
+        document.getElementById("steamId").value = "";
 
     } catch (error) {
         console.error(error);
@@ -31,6 +32,9 @@ document.getElementById("steamId").addEventListener("keypress", (event) => {
 
 async function GETData (steamId) {
     try {
+        avatarValue.innerHTML = "";
+        usernameValue.innerHTML = "";
+        profileUrl.innerHTML = "";
 
         const response = await fetch(`${apiUrl}${steamId}`);
 
