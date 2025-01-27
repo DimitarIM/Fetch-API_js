@@ -6,14 +6,13 @@ const profileUrl = document.querySelector(".profile-url");
 
 const messageBox = document.querySelector(".message-box");
 const searchButton = document.querySelector(".search-button");
-
 let steamId = "";
-
 searchButton.addEventListener("click", () => {
     try {
         let userInput = document.getElementById("steamId").value;
 
         if (steamId != "" && steamId === userInput) throw new Error("User is already loaded");
+        
         else if (steamId === "" && steamId === userInput) throw new Error("The field is empty")
 
         steamId = userInput;
@@ -30,13 +29,13 @@ document.getElementById("steamId").addEventListener("keypress", (event) => {
     if (event.key === "Enter") searchButton.click();
 })
 
-async function GETData (steamId) {
+async function GETData (userId) {
     try {
         avatarValue.innerHTML = "";
         usernameValue.innerHTML = "";
         profileUrl.innerHTML = "";
 
-        const response = await fetch(`${apiUrl}${steamId}`);
+        const response = await fetch(`${apiUrl}${userId}`);
 
         if (!response.ok) throw new Error("User is invalid");
 
