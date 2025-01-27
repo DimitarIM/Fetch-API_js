@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Herr+Von+Muellerhoff&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Giga:wght@100..900&family=My+Soul&family=Noto+Serif+Thai:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: #c7d5e0;
+    font-family: "Bitter", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171a21;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a475e;
+    flex-grow: 1;
+    gap: 5rem;
+}
+
+#steamId {
+    width: 20rem;
+    padding: 4px 4px;
+    border: 3px solid #171a21;
+    text-decoration: none;
+}
+
+.search-button {
+    padding: 16px 28px;
+    background-color: #1b2838;
+    transition: 0.1s;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #c7d5e0;
+}
+
+.search-button:hover {
+    background-color: #213144;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #171a21;
+}
