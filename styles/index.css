@@ -83,3 +83,9 @@ footer {
     padding: 1rem;
     background-color: #171a21;
 }
+
+@media (max-width: 349px ) {
+    header {
+        font-size: 14px;
+    }
+}
